@@ -138,7 +138,7 @@ def main(args):
     args.update_exclusive(default_args)
     directory = os.path.join(config.RESULTSDIR, 'ws', args.directory)
     if not os.path.exists(directory):
-        os.makedirs(directory, mode=0777)
+        os.makedirs(directory, 0755)
     if not args.restore:
         map(os.remove, (os.path.join(directory, f) for f in os.listdir(directory) if f.endswith(".txt") or f.endswith(".png")))
         with open(os.path.join(directory, 'params.txt'), 'w') as f:
