@@ -119,7 +119,7 @@ def binarized_face(n_validation=400):
     test_data = np.load(os.path.join(config.DATASETS_DIR, 'FACE', 'toronto_face_test.npy'))
 
     img = train_data[0]
-    img = img.reshape((1, 784))
+    img = img.reshape((28, 28))
     import matplotlib
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt
