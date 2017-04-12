@@ -74,7 +74,7 @@ class Const():
 
     def __call__(self, n, **kwargs):
         if n not in self.cache:
-            c_rep = tf.zeros(tf.pack([n, 1])) + self.c
+            c_rep = tf.zeros(tf.concat([n, 1], 0)) + self.c
             self.cache[n] = Struct(y=c_rep)
         return self.cache[n]
 
