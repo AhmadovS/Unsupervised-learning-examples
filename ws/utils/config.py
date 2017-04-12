@@ -1,2 +1,2 @@
-DATADIR = '/datasets/'
-RESULTSDIR = '/wake_sleep_contrastive/'
+DATADIR = 'datasets/'
+RESULTSDIR = 'wake_sleep_contrastive/'
