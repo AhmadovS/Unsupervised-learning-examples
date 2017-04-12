@@ -49,13 +49,13 @@ def post_experiment(directory_name, dataset, model):
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt
     plt.imshow(samples, cmap='Greys')
-    plt.savefig(os.path.join(directory_name, "samples.jpg"))
+    plt.savefig(os.path.join(directory_name, "samples.png"))
     plt.close()
     plt.imshow(q_weights, cmap='Greys')
-    plt.savefig(os.path.join(directory_name, "q_weights.jpg"))
+    plt.savefig(os.path.join(directory_name, "q_weights.png"))
     plt.close()
     plt.imshow(p_weights, cmap='Greys')
-    plt.savefig(os.path.join(directory_name, "p_weights.jpg"))
+    plt.savefig(os.path.join(directory_name, "p_weights.png"))
     plt.close()
 
     num_samples = 5000

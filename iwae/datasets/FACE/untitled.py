@@ -40,23 +40,25 @@ def plot_images(images, ax, ims_per_row=5, padding=5, digit_dimensions=(28, 28),
     plt.yticks(np.array([]))
     return cax
 
-train = np.zeros((int(inputs_train.size / 2304), 784))
-for i in range(int(inputs_train.size / 2304)):
-	img = inputs_train[i]
-	img = img.reshape((48, 48))	
-	img = scipy.misc.imresize(img, (28, 28))
-	img = img.reshape((784, ))
-	train[i] = img
+# train = np.zeros((int(inputs_train.size / 2304), 784))
+# for i in range(int(inputs_train.size / 2304)):
+# 	img = inputs_train[i]
+# 	img = img.reshape((48, 48))	
+# 	img = scipy.misc.imresize(img, (28, 28))
+# 	img = img.reshape((784, ))
+# 	train[i] = img
 
-test = np.zeros((int(inputs_test.size / 2304), 784))
-for i in range(int(inputs_test.size / 2304)):
-    img = inputs_test[i]
-    img = img.reshape((48, 48)) 
-    img = scipy.misc.imresize(img, (28, 28))
-    img = img.reshape((784, ))
-    test[i] = img
+# test = np.zeros((int(inputs_test.size / 2304), 784))
+# for i in range(int(inputs_test.size / 2304)):
+#     img = inputs_test[i]
+#     img = img.reshape((48, 48)) 
+#     img = scipy.misc.imresize(img, (28, 28))
+#     img = img.reshape((784, ))
+#     test[i] = img
 
-np.save('toronto_face_train', train)
-np.save('toronto_face_test', test)
+# np.save('toronto_face_train', train)
+# np.save('toronto_face_test', test)
 
-
+print(inputs_train.shape)
+print(inputs_valid.shape)
+print(inputs_test.shape)
