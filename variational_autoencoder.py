@@ -89,7 +89,8 @@ if __name__ == '__main__':
     step_size = 0.001
 
     print("Loading training data...")
-    N, train_images, _, test_images, _ = load_mnist()
+    # N, train_images, _, test_images, _ = load_mnist()
+    N, train_images, _, test_images, _ = load_face()
     on = train_images > 0.5
     train_images = train_images * 0 - 1
     train_images[on] = 1.0

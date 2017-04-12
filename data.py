@@ -59,6 +59,16 @@ def load_mnist():
 
     return N_data, train_images, train_labels, test_images, test_labels
 
+def load_face():
+    partial_flatten = lambda x : np.reshape(x, (x.shape[0], np.prod(x.shape[1:])))
+    train_images = np.load('./iwae/datasets/FACE/toronto_face_train.npy')
+    test_images = np.load('./iwae/datasets/FACE/toronto_face_test.npy')
+    train_images = partial_flatten(train_images) / 255.0
+    test_images  = partial_flatten(test_images)  / 255.0
+
+    N_data = train_images.shape[0]
+
+    return N_data, train_images, None, test_images, None
 
 def plot_images(images, ax, ims_per_row=5, padding=5, digit_dimensions=(28, 28),
                 cmap=matplotlib.cm.binary, vmin=None, vmax=None):
