@@ -118,16 +118,6 @@ def binarized_face(n_validation=400):
     train_data = np.load(os.path.join(config.DATASETS_DIR, 'FACE', 'toronto_face_train.npy'))
     test_data = np.load(os.path.join(config.DATASETS_DIR, 'FACE', 'toronto_face_test.npy'))
 
-    img = train_data[0]
-    img = img.reshape((28, 28))
-    import matplotlib
-    matplotlib.use('Agg')
-    import matplotlib.pyplot as plt
-    plt.imshow(img, cmap='Greys')
-    plt.savefig("./ha.png")
-    plt.close()
-    sys.exit(0)
-
     return BinarizedDatasetTheano(DatasetTheano(train_data, test_data, n_validation, shuffle=False))
     # return DatasetTheano(train_data, test_data, n_validation, shuffle=False)
 
