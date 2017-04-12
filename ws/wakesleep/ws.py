@@ -137,6 +137,7 @@ class Model():
 def main(args):
     args.update_exclusive(default_args)
     directory = os.path.join(config.RESULTSDIR, 'ws', args.directory)
+    print(directory)
     if not os.path.exists(directory):
         os.makedirs(directory, 0755)
     if not args.restore:
