@@ -8,8 +8,8 @@ import numpy as np
 import struct
 import os
 import scipy.io
-
-
+import pickle
+import sys
 class DatasetTheano():
     def __init__(self, train_data, test_data, n_used_for_validation, shuffle=False, shuffle_seed=123):
         self.data = {}
@@ -118,7 +118,15 @@ def binarized_face(n_validation=400):
     train_data = np.load(os.path.join(config.DATASETS_DIR, 'FACE', 'toronto_face_train.npy'))
     test_data = np.load(os.path.join(config.DATASETS_DIR, 'FACE', 'toronto_face_test.npy'))
 
-
+    img = train_data[0]
+    import matplotlib
+    matplotlib.use('Agg')
+    import matplotlib.pyplot as plt
+    plt.imshow(img, cmap='Greys')
+    plt.savefig(os.path.join(directory_name, "ha.png"))
+    plt.close()
+    sys.exit(0)
+    
     return BinarizedDatasetTheano(DatasetTheano(train_data, test_data, n_validation, shuffle=False))
     # return DatasetTheano(train_data, test_data, n_validation, shuffle=False)
 
