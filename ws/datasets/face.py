@@ -14,7 +14,6 @@ class FACE():
         self.binary = binary
         self.train_rng = np.random.RandomState(283)
 
-        self._ensure_file_is_on_disk()
         self.data = {}
         self.data['train'] = np.load(os.path.join(self.directory, 'toronto_face_train.npy'))
         self.data['test'] = np.load(os.path.join(self.directory, 'toronto_face_test.npy'))
