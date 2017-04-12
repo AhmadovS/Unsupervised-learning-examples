@@ -51,13 +51,13 @@ def post_experiment(directory_name, dataset, model):
     plt.imshow(samples, cmap='Greys')
     plt.savefig(os.path.join(directory_name, "samples.png"))
     plt.close()
-    sys.exit(0)
     plt.imshow(q_weights, cmap='Greys')
     plt.savefig(os.path.join(directory_name, "q_weights.png"))
     plt.close()
     plt.imshow(p_weights, cmap='Greys')
     plt.savefig(os.path.join(directory_name, "p_weights.png"))
     plt.close()
+    sys.exit(0)
 
     num_samples = 5000
     marginal_log_likelihood = iwae.measure_marginal_log_likelihood(model=model, dataset=dataset,
@@ -136,7 +136,7 @@ def training_experiment(directory_name, latent_units, hidden_units_q, hidden_uni
         save_checkpoint(directory_name, 0, model, optimizer, srng)
         loaded_checkpoint = 0
 
-    for i in range(loaded_checkpoint+1, 2):
+    for i in range(loaded_checkpoint+1, 3):
         model, optimizer, srng = checkpoint1to8(i, dataset, model, optimizer, srng)
         save_checkpoint(directory_name, i, model, optimizer, srng)
     loaded_checkpoint = 8
