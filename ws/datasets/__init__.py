@@ -1,2 +1,3 @@
 from mnist import MNIST
-from bsds import BSDS_patches
+# from bsds import BSDS_patches
+from face import FACE

@@ -6,7 +6,7 @@ import numpy as np
 import utils.misc as misc
 
 
-class MNIST():
+class FACE():
     def __init__(self, binary=False):
         self.name = 'FACE'
         self.directory = os.path.join(config.DATADIR, self.name)
