@@ -171,7 +171,7 @@ if __name__ == '__main__':
     parser.add_argument('--layers', '-l', type=int, choices=[1, 2], default=1)
     parser.add_argument('--model', '-m', choices=['vae', 'iwae'], default='vae')
     parser.add_argument('--k', '-k', type=int, default=1)
-    parser.add_argument('--dataset', '-d', choices=['MNIST', 'OMNI', 'BinFixMNIST'], default='MNIST')
+    parser.add_argument('--dataset', '-d', choices=['MNIST', 'OMNI', 'BinFixMNIST', 'FACE'], default='MNIST')
     parser.add_argument('--checkpoint', '-c', type=int, default=-1)
 
     args = parser.parse_args()

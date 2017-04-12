@@ -114,6 +114,13 @@ def binarized_mnist_fixed_binarization():
 
     return DatasetTheano(np.concatenate([train_data, validation_data], axis=0), test_data, n_used_for_validation=10000, shuffle=False)
 
+def binarized_face(n_validation=400):
+    train_data = np.load(os.path.join(config.DATASETS_DIR, 'FACE', 'toronto_face_train.npy'))
+    test_data = np.load(os.path.join(config.DATASETS_DIR, 'FACE', 'toronto_face_test.npy'))
+
+
+    return BinarizedDatasetTheano(DatasetTheano(train_data, test_data, n_validation, shuffle=False))
+
 
 def load_dataset_from_name(dataset_name):
     if dataset_name == 'MNIST':
@@ -122,4 +129,6 @@ def load_dataset_from_name(dataset_name):
         dataset = binarized_mnist_fixed_binarization()
     elif dataset_name == 'OMNI':
         dataset = binarized_shuffled_omniglot()
+    elif dataset_name == 'FACE':
+        dataset = binarized_face()
     return dataset

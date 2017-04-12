@@ -40,21 +40,23 @@ def plot_images(images, ax, ims_per_row=5, padding=5, digit_dimensions=(28, 28),
     plt.yticks(np.array([]))
     return cax
 
-result = np.zeros((int(inputs_train.size / 2304), 784))
+train = np.zeros((int(inputs_train.size / 2304), 784))
 for i in range(int(inputs_train.size / 2304)):
 	img = inputs_train[i]
 	img = img.reshape((48, 48))	
 	img = scipy.misc.imresize(img, (28, 28))
 	img = img.reshape((784, ))
-	result[i] = img
+	train[i] = img
 
-# img = inputs_train[0]
-# img = img.reshape((48, 48))
-# img = scipy.misc.imresize(img, (28, 28))
-# img = img.reshape((1, 784))
-# save_images(img, 'hello1.jpg')
+test = np.zeros((int(inputs_test.size / 2304), 784))
+for i in range(int(inputs_test.size / 2304)):
+    img = inputs_test[i]
+    img = img.reshape((48, 48)) 
+    img = scipy.misc.imresize(img, (28, 28))
+    img = img.reshape((784, ))
+    test[i] = img
 
-
-np.save('compressed', result)
+np.save('toronto_face_train', train)
+np.save('toronto_face_test', test)
 
 
