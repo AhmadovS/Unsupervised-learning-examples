@@ -124,7 +124,7 @@ def binarized_face(n_validation=400):
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt
     plt.imshow(img, cmap='Greys')
-    plt.savefig(os.path.join(directory_name, "ha.png"))
+    plt.savefig("./ha.png")
     plt.close()
     sys.exit(0)
 
