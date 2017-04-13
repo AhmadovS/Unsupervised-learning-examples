@@ -302,6 +302,8 @@ class LayerStack(Model):
             Hp[l] = f_logsumexp(log_w+log_p[l], axis=1)
             Hq[l] = T.sum(w*log_q[l], axis=1)
 
+        print(log_px)
+        print('============================')
         return log_px, w, log_p_all, log_q_all, KL, Hp, Hq
 
     def get_gradients(self, X, Y, lr_p, lr_q, n_samples):
