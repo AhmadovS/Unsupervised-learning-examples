@@ -87,7 +87,7 @@ if __name__ == "__main__":
         log_p = log_p[idx]
 
 
-    plt.imshow(args.samples, cmap='Greys')
+    plt.imshow(args.nsamples, cmap='Greys')
     plt.savefig('sample.png')
     plt.close()
 
