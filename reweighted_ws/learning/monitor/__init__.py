@@ -118,7 +118,7 @@ class MonitorLL(Monitor):
         batch_Hp = [T.sum(hp) for hp in Hp]
         batch_Hq = [T.sum(hq) for hq in Hq]
 
-        print('batch_L': str(batch_L))
+        print('batch_L: '+ str(batch_L))
         print(batch_KL)
         print(batch_Hp)
         print(batch_Hq)
