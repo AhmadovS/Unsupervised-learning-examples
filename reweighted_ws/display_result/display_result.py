@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import tables
 
 def display_fields(F, n_fields=24, D=28):
     for i in xrange(n_fields):
