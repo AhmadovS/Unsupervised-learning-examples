@@ -146,8 +146,8 @@ def main(args):
             f.write(repr(args))
     print directory
 
-    # dataset = datasets.MNIST(binary=True)
-    dataset = datasets.FACE(binary=False)
+    dataset = datasets.MNIST(binary=True)
+    # dataset = datasets.FACE(binary=False)
 
     x = tf.placeholder(np.float32, shape=(None, dataset.get_data_dim()))
 
