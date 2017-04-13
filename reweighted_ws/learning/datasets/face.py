@@ -55,8 +55,8 @@ class FACE(DataSet):
         else:
             raise ValueError("Unknown dataset %s" % which_set)
 
-        x = np.load(data_name)
-        y = np.load(label_name)
+        x = np.load(data_name).astype(int)
+        y = np.load(label_name).astype(int)
         self.X, self.Y = self.prepare(x, y, n_datapoints)
 
         self.n_datapoints = self.X.shape[0]
