@@ -1,0 +1,17 @@
+[23:00:54] trainer         compiling do_step
+[23:00:58] trainer         compiling do_sleep_step
+[23:00:59] trainer         Dataset contains 3374 datapoints in 33 mini-batches (100 datapoints per mini-batch)
+[23:00:59] trainer         Using 1 training samples
+[23:00:59] trainer         lr_p=1.0e-03, lr_q=1.0e-03, lr_s=1.0e-03, lr_decay=1.0e+00 layer_discount=1.00
+[23:00:59] model           Saving model parameters
+[23:00:59] valiset         compiling do_loglikelihood
+[23:01:01] valiset         (419 datpoints, 1 samples): LL=-240.70 +-5.66; Hp=[-240.69 -111.3  -111.31   -5.61]
+[23:01:02] valiset         (419 datpoints, 5 samples): LL=-240.69 +-5.66; Hp=[-240.69 -105.84 -105.71   -4.93]
+[23:01:03] valiset         (419 datpoints, 25 samples): LL=-246.55 +-4.36; Hp=[-246.55 -105.02 -105.01   -4.93]
+[23:01:10] valiset         (419 datpoints, 100 samples): LL=-246.55 +-4.36; Hp=[-246.55 -103.05 -103.06   -4.91]
+[23:01:10] trainer         Starting epoch 0...
+[23:01:12] trainer         Completed epoch 1 in 1.4s (41.4ms/step). Calling epoch_monitors...
+[23:01:12] model           Saving model parameters
+[23:01:12] valiset         (419 datpoints, 1 samples): LL=-36.35 +-10.93; Hp=[ -35.89 -110.86 -111.07   -5.65]
+[23:01:12] valiset         (419 datpoints, 5 samples): LL=-31.47 +-9.79; Hp=[ -30.07 -111.09 -107.45   -5.38]
+[23:01:14] valiset         (419 datpoints, 25 samples): LL=-30.12 +-9.36; Hp=[ -28.17 -113.74 -106.55   -5.2 ]
