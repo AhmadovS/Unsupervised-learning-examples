@@ -12,7 +12,7 @@ import numpy as np
 import h5py
 
 
-import pylab
+import matplotlib.pyplot as plt
 #import theano
 #import theano.tensor as T
 
@@ -21,8 +21,8 @@ _logger = logging.getLogger()
 #=============================================================================
 if __name__ == "__main__":
     import argparse 
-    pylab.use('Agg')
-    
+    plt.use('Agg')
+
     logger = logging.getLogger(__name__)
 
     parser = argparse.ArgumentParser()
@@ -87,13 +87,13 @@ if __name__ == "__main__":
         samples = samples[idx]
         log_p = log_p[idx]
 
-    pylab.figure()
+    plt.figure()
     for i in xrange(args.nsamples):
-        pylab.subplot(10, 10, i+1)
-        pylab.imshow( samples[i,perm_inv].reshape(shape), interpolation='nearest')
-        pylab.gray()
-        pylab.axis('off')
+        plt.subplot(10, 10, i+1)
+        plt.imshow( samples[i,perm_inv].reshape(shape), interpolation='nearest')
+        plt.gray()
+        plt.axis('off')
 
-    pylab.legend(loc="lower right")
-    pylab.show(block=True)
-    pylab.savefig('sample.png')
+    plt.legend(loc="lower right")
+    plt.show(block=True)
+    plt.savefig('sample.png')
