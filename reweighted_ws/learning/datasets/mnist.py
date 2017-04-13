@@ -16,6 +16,8 @@ import numpy as np
 import theano
 import theano.tensor as T
 
+import sys
+
 from learning.datasets import DataSet, datapath
 
 _logger = logging.getLogger(__name__)
@@ -41,6 +43,11 @@ class MNIST(DataSet):
 
         if which_set == 'train':
             self.X, self.Y = self.prepare(train_x, train_y, n_datapoints)
+            print(train_x.shape)
+            print(train_y.shape)
+            print(self.X.shape)
+            print(self.Y.shape)
+            sys.exit(0)
         elif which_set == 'valid':
             self.X, self.Y = self.prepare(valid_x, valid_y, n_datapoints)
         elif which_set == 'test':
