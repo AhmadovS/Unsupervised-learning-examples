@@ -1,0 +1,101 @@
+[23:09:40] trainer         compiling do_step
+[23:09:44] trainer         compiling do_sleep_step
+[23:09:45] trainer         Dataset contains 3374 datapoints in 33 mini-batches (100 datapoints per mini-batch)
+[23:09:45] trainer         Using 10 training samples
+[23:09:45] trainer         lr_p=1.0e-03, lr_q=1.0e-03, lr_s=1.0e-03, lr_decay=1.0e+00 layer_discount=1.00
+[23:09:45] model           Saving model parameters
+[23:09:45] SampleFromP     compiling do_sample
+[23:09:45] SampleFromP     SampleFromP(n_samples=100)
+[23:09:45] valiset         compiling do_loglikelihood
+[23:09:47] valiset         (419 datpoints, 1 samples): LL=-240.69 +-5.66; Hp=[-240.69 -111.18 -111.9    -5.54]
+[23:09:48] valiset         (419 datpoints, 5 samples): LL=-240.69 +-5.66; Hp=[-240.69 -105.85 -105.52   -4.93]
+[23:09:49] valiset         (419 datpoints, 25 samples): LL=-246.55 +-4.36; Hp=[-246.55 -104.76 -104.95   -4.9 ]
+[23:09:56] valiset         (419 datpoints, 100 samples): LL=-246.55 +-4.36; Hp=[-246.55 -103.26 -103.01   -4.9 ]
+[23:09:56] trainer         Starting epoch 0...
+[23:10:05] trainer         Completed epoch 1 in 8.6s (261.6ms/step). Calling epoch_monitors...
+[23:10:05] model           Saving model parameters
+[23:10:05] SampleFromP     SampleFromP(n_samples=100)
+[23:10:05] valiset         (419 datpoints, 1 samples): LL=-38.85 +-13.17; Hp=[ -37.28 -117.76 -110.22   -5.72]
+[23:10:06] valiset         (419 datpoints, 5 samples): LL=-33.80 +-12.20; Hp=[ -32.74 -119.31 -106.44   -5.28]
+[23:10:07] valiset         (419 datpoints, 25 samples): LL=-32.27 +-11.95; Hp=[ -31.24 -123.04 -106.65   -5.25]
+[23:10:15] valiset         (419 datpoints, 100 samples): LL=-30.37 +-11.15; Hp=[ -29.29 -123.21 -104.86   -5.17]
+[23:10:15] termination     Validation LL=-30.37 (increased by  nan %)
+[23:10:15] trainer         Starting epoch 1...
+[23:10:24] trainer         Completed epoch 2 in 8.8s (268.0ms/step). Calling epoch_monitors...
+[23:10:24] model           Saving model parameters
+[23:10:24] SampleFromP     SampleFromP(n_samples=100)
+[23:10:24] valiset         (419 datpoints, 1 samples): LL=-36.30 +-14.44; Hp=[ -35.59 -123.62 -111.32   -5.52]
+[23:10:24] valiset         (419 datpoints, 5 samples): LL=-33.61 +-13.59; Hp=[ -32.89 -121.69 -105.72   -5.1 ]
+[23:10:26] valiset         (419 datpoints, 25 samples): LL=-31.66 +-12.70; Hp=[ -30.88 -123.43 -105.92   -5.  ]
+[23:10:33] valiset         (419 datpoints, 100 samples): LL=-30.23 +-12.05; Hp=[ -29.39 -122.86 -103.98   -5.  ]
+[23:10:33] termination     Validation LL=-30.23 (increased by 0.45 %)
+[23:10:33] trainer         Starting epoch 2...
+[23:10:42] trainer         Completed epoch 3 in 8.8s (266.6ms/step). Calling epoch_monitors...
+[23:10:42] model           Saving model parameters
+[23:10:42] SampleFromP     SampleFromP(n_samples=100)
+[23:10:42] valiset         (419 datpoints, 1 samples): LL=-30.42 +-11.10; Hp=[ -29.31 -125.91 -110.95   -5.5 ]
+[23:10:43] valiset         (419 datpoints, 5 samples): LL=-27.98 +-10.34; Hp=[ -26.91 -124.73 -105.86   -5.13]
+[23:10:45] valiset         (419 datpoints, 25 samples): LL=-26.54 +-9.81; Hp=[ -25.36 -126.78 -105.43   -5.13]
+[23:10:52] valiset         (419 datpoints, 100 samples): LL=-25.74 +-9.47; Hp=[ -24.52 -126.23 -103.73   -4.96]
+[23:10:52] termination     Validation LL=-25.74 (increased by 14.86 %)
+[23:10:52] trainer         Starting epoch 3...
+[23:11:01] trainer         Completed epoch 4 in 8.8s (267.4ms/step). Calling epoch_monitors...
+[23:11:01] model           Saving model parameters
+[23:11:01] SampleFromP     SampleFromP(n_samples=100)
+[23:11:01] valiset         (419 datpoints, 1 samples): LL=-26.23 +-8.91; Hp=[ -24.85 -127.71 -110.41   -5.54]
+[23:11:01] valiset         (419 datpoints, 5 samples): LL=-23.98 +-8.15; Hp=[ -22.47 -126.7  -106.1    -5.17]
+[23:11:03] valiset         (419 datpoints, 25 samples): LL=-23.20 +-7.92; Hp=[ -21.56 -129.27 -104.93   -5.03]
+[23:11:11] valiset         (419 datpoints, 100 samples): LL=-22.45 +-7.57; Hp=[ -20.51 -128.84 -103.66   -4.99]
+[23:11:11] termination     Validation LL=-22.45 (increased by 12.80 %)
+[23:11:11] trainer         Starting epoch 4...
+[23:11:19] trainer         Completed epoch 5 in 8.8s (266.4ms/step). Calling epoch_monitors...
+[23:11:19] model           Saving model parameters
+[23:11:20] SampleFromP     SampleFromP(n_samples=100)
+[23:11:20] valiset         (419 datpoints, 1 samples): LL=-24.06 +-7.84; Hp=[ -22.39 -129.13 -111.02   -5.56]
+[23:11:20] valiset         (419 datpoints, 5 samples): LL=-21.99 +-7.17; Hp=[ -19.94 -128.12 -106.6    -5.15]
+[23:11:22] valiset         (419 datpoints, 25 samples): LL=-21.32 +-7.01; Hp=[ -19.11 -130.45 -105.81   -5.  ]
+[23:11:29] valiset         (419 datpoints, 100 samples): LL=-20.84 +-6.83; Hp=[ -18.53 -129.99 -104.15   -4.95]
+[23:11:29] termination     Validation LL=-20.84 (increased by 7.17 %)
+[23:11:29] trainer         Starting epoch 5...
+[23:11:38] trainer         Completed epoch 6 in 8.8s (267.9ms/step). Calling epoch_monitors...
+[23:11:38] model           Saving model parameters
+[23:11:38] SampleFromP     SampleFromP(n_samples=100)
+[23:11:38] valiset         (419 datpoints, 1 samples): LL=-21.75 +-6.70; Hp=[ -19.4  -129.53 -111.29   -5.55]
+[23:11:39] valiset         (419 datpoints, 5 samples): LL=-20.22 +-6.39; Hp=[ -17.83 -128.13 -106.79   -5.13]
+[23:11:41] valiset         (419 datpoints, 25 samples): LL=-19.60 +-6.24; Hp=[ -16.94 -130.56 -106.46   -5.04]
+[23:11:48] valiset         (419 datpoints, 100 samples): LL=-19.01 +-6.08; Hp=[ -16.29 -130.05 -104.83   -4.95]
+[23:11:48] termination     Validation LL=-19.01 (increased by 8.79 %)
+[23:11:48] trainer         Calling final_monitors...
+[23:11:48] final-testset   compiling do_loglikelihood
+[23:11:50] final-testset   (385 datpoints, 1 samples): LL=-2.23 +-0.37; Hp=[  -1.6  -106.35  -90.98   -4.57]
+[23:11:50] final-testset   (385 datpoints, 5 samples): LL=-1.68 +-0.33; Hp=[  -1.34 -105.3   -87.18   -4.07]
+[23:11:51] final-testset   (385 datpoints, 10 samples): LL=-1.54 +-0.33; Hp=[  -1.28 -104.95  -85.88   -4.01]
+[23:11:52] final-testset   (385 datpoints, 25 samples): LL=-2.82 +-0.80; Hp=[  -2.41 -132.43 -107.05   -4.99]
+[23:11:59] final-testset   (385 datpoints, 100 samples): LL=-2.78 +-0.79; Hp=[  -2.34 -132.11 -105.35   -4.96]
+[23:12:34] final-testset   (385 datpoints, 500 samples): LL=-2.91 +-0.83; Hp=[  -2.43 -133.54 -105.39   -4.97]
+[23:12:34] final-trainset  compiling do_loglikelihood
+[23:12:36] final-trainset  (3374 datpoints, 1 samples): LL=-16.15 +-2.44; Hp=[ -14.23 -132.94 -114.09   -5.67]
+[23:12:39] final-trainset  (3374 datpoints, 5 samples): LL=-14.70 +-2.29; Hp=[ -12.82 -131.52 -109.15   -5.21]
+[23:12:45] final-trainset  (3374 datpoints, 10 samples): LL=-14.39 +-2.25; Hp=[ -12.5  -131.18 -107.78   -5.11]
+[23:13:01] final-trainset  (3374 datpoints, 25 samples): LL=-14.20 +-2.22; Hp=[ -12.21 -133.58 -108.49   -5.1 ]
+[23:14:01] final-trainset  (3374 datpoints, 100 samples): LL=-13.86 +-2.16; Hp=[ -11.74 -133.18 -106.79   -5.03]
+[23:19:06] final-trainset  (3374 datpoints, 500 samples): LL=-13.73 +-2.12; Hp=[ -11.51 -132.99 -105.43   -5.  ]
+[23:19:06] root            Finished. Wrinting metadata
+[23:19:06] experiment      Parameter file:   None
+[23:19:06] experiment      Output directory: output/bs100-lr13-si2-spl10-sbn-sbn-200-200-10.2017-04-13-23-09/
+[23:19:06] experiment      -- Trainer hyperparameter --
+[23:19:06] experiment             learning_rate_q: 0.001
+[23:19:06] experiment             learning_rate_p: 0.001
+[23:19:06] experiment             learning_rate_s: 0.001
+[23:19:06] experiment              layer_discount: 1.0
+[23:19:06] experiment            monitor_nth_step: 1
+[23:19:06] experiment                   n_samples: 10
+[23:19:06] experiment                  batch_size: 100
+[23:19:06] experiment                        beta: 0.95
+[23:19:06] experiment            sleep_interleave: 2
+[23:19:06] experiment                weight_decay: 0.0
+[23:19:06] experiment                    lr_decay: 1.0
+[23:19:06] experiment      -- Model hyperparameter --
+[23:19:06] experiment                layer sizes: 784-200-200-10
+[23:19:06] experiment                   p-layers: <class 'learning.models.sbn.SBN'> - <class 'learning.models.sbn.SBN'> - <class 'learning.models.sbn.SBN'> - <class 'learning.models.sbn.SBNTop'>
+[23:19:06] experiment                   q-layers: <class 'learning.models.sbn.SBN'> - <class 'learning.models.sbn.SBN'> - <class 'learning.models.sbn.SBN'>
