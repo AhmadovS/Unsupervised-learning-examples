@@ -56,9 +56,9 @@ def run_experiment(args):
     # n_samples to evaluate model
     n_samples_epoch = [1, 5, 25, 100]
     n_samples_final = [1, 5, 10, 25, 100, 500]
-    if (args.p_model in ['darn', 'nade']) or (args.q_model in ['darn', 'nade']):
-        n_samples_epoch = [1, 5, 25, 100]
-        n_samples_final = [1, 5, 10, 25, 100, 500]
+    # if (args.p_model in ['darn', 'nade']) or (args.q_model in ['darn', 'nade']):
+    #     n_samples_epoch = [1, 5, 25, 100]
+    #     n_samples_final = [1, 5, 10, 25, 100, 500]
 
 
 
@@ -179,13 +179,13 @@ def run_experiment(args):
         lr_decay=args.lrdecay,
         dataset=dataset, 
         model=model,
-        termination=EarlyStopping(lookahead=args.lookahead, min_epochs=1, max_epochs=6),
+        termination=EarlyStopping(lookahead=args.lookahead, min_epochs=1, max_epochs=5),
         epoch_monitors=[
             DLogModelParams(),
+            SampleFromP(n_samples=100),
             MonitorLL(name="valiset", data=valiset, n_samples=n_samples_epoch),
         ],
         final_monitors=[
-            SampleFromP(n_samples=100),
             MonitorLL(name="final-testset", data=testset, n_samples=n_samples_final),
             MonitorLL(name="final-trainset", data=dataset, n_samples=n_samples_final),
         ],
