@@ -126,11 +126,11 @@ class Model():
         for q, sample1, sample2 in zip(self.q, self.q_samples_rep, self.q_samples_rep[1:]):
             self.variational_lower_bound -= q(sample1).out.log_prob(sample2)
 
-        self.variational_lower_bound = tf.reshape(self.variational_lower_bound, tf.pack([-1, self.k]))
+        self.variational_lower_bound = tf.reshape(self.variational_lower_bound, tf.stack([-1, self.k]))
         self.variational_lower_bound = utils.tf_log_mean_exp(self.variational_lower_bound)
 
         self.reconstruction_loss = self.p[-1](self.q_samples_rep[1]).out.log_prob(self.x_rep)
-        self.reconstruction_loss = tf.reshape(self.reconstruction_loss, tf.pack([-1, self.k]))
+        self.reconstruction_loss = tf.reshape(self.reconstruction_loss, tf.stack([-1, self.k]))
         self.reconstruction_loss = tf.reduce_mean(self.reconstruction_loss, 1)
 
 
