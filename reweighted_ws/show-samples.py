@@ -21,7 +21,6 @@ _logger = logging.getLogger()
 #=============================================================================
 if __name__ == "__main__":
     import argparse 
-    plt.use('Agg')
 
     logger = logging.getLogger(__name__)
 
