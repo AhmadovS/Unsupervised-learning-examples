@@ -42,7 +42,7 @@ def download(url, filename):
     pbar = progressbar.ProgressBar()
 
     def dlProgress(count, blockSize, totalSize):
-        if pbar.maxval is None:
+        if pbar.max_value is None:
             pbar.maxval = totalSize
             pbar.start()
 
