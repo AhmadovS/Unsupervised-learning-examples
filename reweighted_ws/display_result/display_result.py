@@ -10,7 +10,7 @@ def display_fields(F, n_fields=24, D=28):
     plt.savefig('result.png')
 
 
-result_location = "../mnist/output2/bs100-lr13-si2-spl10-sbn-sbn-200-200-10.2017-04-13-18-53/result.h5"
+result_location = "../mnist/output2/bs100-lr13-si2-spl10-sbn-sbn-200-200-10.2017-04-13-18-53/results.h5"
 hparams = {}
 with tables.open_file(result_location, "r") as h5:
     Lp_10 = h5.root.Lp_10[:]
