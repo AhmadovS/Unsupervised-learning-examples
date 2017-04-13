@@ -18,6 +18,7 @@ class FACE():
         self.data['train'] = np.load(os.path.join(self.directory, 'toronto_face_train.npy'))
         self.data['test'] = np.load(os.path.join(self.directory, 'toronto_face_test.npy'))
         self.data['valid'] = np.load(os.path.join(self.directory, 'toronto_face_valid.npy'))
+        self.label = {}
         self.label['train'] = np.load(os.path.join(self.directory, 'toronto_face_train_label.npy'))
         self.label['test'] = np.load(os.path.join(self.directory, 'toronto_face_test_label.npy'))
         self.label['valid'] = np.load(os.path.join(self.directory, 'toronto_face_valid_label.npy'))
