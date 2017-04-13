@@ -37,7 +37,7 @@ class MNIST():
         print('Data: ')
         print(data)
         print('Label: ')
-        print(label)
+        print(labels)
         return data, labels
 
     def get_random_minibatch(self, subdataset, minibatch_size, rng):
