@@ -21,11 +21,11 @@ class FACE():
 
 
     def minibatch(self, subdataset, indices, rng):
-        data, labels = self.data[subdataset]
-        data, labels = data[indices], labels[indices]
+        data = self.data[subdataset]
+        data = data[indices]
         if self.binary:
             data = misc.binarize(data, rng)
-        return data, labels
+        return data, None
 
     def get_random_minibatch(self, subdataset, minibatch_size, rng):
         indices = rng.randint(self.data[subdataset][0].shape[0], size=(minibatch_size,))
