@@ -21,7 +21,8 @@ _logger = logging.getLogger()
 #=============================================================================
 if __name__ == "__main__":
     import argparse 
-
+    pylab.use('Agg')
+    
     logger = logging.getLogger(__name__)
 
     parser = argparse.ArgumentParser()
