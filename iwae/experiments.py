@@ -57,7 +57,6 @@ def post_experiment(directory_name, dataset, model):
     plt.imshow(p_weights, cmap='Greys')
     plt.savefig(os.path.join(directory_name, "p_weights.png"))
     plt.close()
-    sys.exit(0)
 
     num_samples = 5000
     marginal_log_likelihood = iwae.measure_marginal_log_likelihood(model=model, dataset=dataset,
