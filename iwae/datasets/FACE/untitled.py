@@ -74,11 +74,12 @@ for i in range(int(inputs_valid.size / 2304)):
     img = img.reshape((784, ))
     valid[i] = img
 
+valid = valid / 255
 np.save('toronto_face_valid', valid)
 # np.save('toronto_face_test', test)
 
-# img = inputs_train[42]
-# img = img.reshape((48, 48))
+# img = train[42]
+# img = img.reshape((28, 28))
 # import matplotlib
 # matplotlib.use('Agg')
 # import matplotlib.pyplot as plt
