@@ -31,7 +31,10 @@ class FACE():
         label = label[indices].astype(int)
         if self.binary:
             data = misc.binarize(data, rng)
-
+        print('Data: ')
+        print(data)
+        print('Label: ')
+        print(label)
         return data, label
 
     def get_random_minibatch(self, subdataset, minibatch_size, rng):
