@@ -17,6 +17,7 @@ class MNIST():
 
         self._ensure_file_is_on_disk()
         self.data = {}
+        print(self.filename)
         with gzip.open(self.filename, 'rb') as f:
             self.data['train'], self.data['valid'], self.data['test'] \
                 = cPickle.load(f)
