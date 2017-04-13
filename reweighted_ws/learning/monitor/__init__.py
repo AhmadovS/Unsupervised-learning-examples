@@ -118,6 +118,11 @@ class MonitorLL(Monitor):
         batch_Hp = [T.sum(hp) for hp in Hp]
         batch_Hq = [T.sum(hq) for hq in Hq]
 
+        print('batch_L': str(batch_L))
+        print(batch_KL)
+        print(batch_Hp)
+        print(batch_Hq)
+        print('====================')
         self.do_loglikelihood = theano.function(  
                             inputs=[batch_idx, batch_size, n_samples], 
                             outputs=[batch_L, batch_L2] + batch_KL + batch_Hp + batch_Hq, 
@@ -156,7 +161,6 @@ class MonitorLL(Monitor):
                 batch_Hp, outputs = outputs[:n_layers], outputs[n_layers:]
                 batch_Hq          = outputs[:n_layers]
                 
-                print('batch_L: ' + str(batch_L))
                 L  += batch_L
                 L2 += batch_L2
                 KL += np.array(batch_KL)
