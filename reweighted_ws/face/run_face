@@ -179,7 +179,7 @@ def run_experiment(args):
         lr_decay=args.lrdecay,
         dataset=dataset, 
         model=model,
-        termination=EarlyStopping(lookahead=args.lookahead, min_epochs=1, max_epochs=4),
+        termination=EarlyStopping(lookahead=args.lookahead, min_epochs=1, max_epochs=9),
         epoch_monitors=[
             DLogModelParams(),
             MonitorLL(name="valiset", data=valiset, n_samples=n_samples_epoch),
