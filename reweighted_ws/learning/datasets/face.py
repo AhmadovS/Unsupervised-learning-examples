@@ -16,6 +16,8 @@ import numpy as np
 import theano
 import theano.tensor as T
 
+import sys
+
 from learning.datasets import DataSet, datapath
 
 _logger = logging.getLogger(__name__)
@@ -62,6 +64,8 @@ class FACE(DataSet):
     def prepare(self, x, y, n_datapoints):
         print(x.shape)
         print(y.shape)
+        print(x[0])
+        print(y[0])
         sys.exit(0)
         N = x.shape[0]
         assert N == y.shape[0]
