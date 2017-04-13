@@ -32,16 +32,17 @@ class FACE(DataSet):
 
 
         if which_set == 'train':
-            data_name = 'toronto_face_train.npy'
-            label_name = 'toronto_face_train_label.npy'
+            data_name = datapath('toronto_face_train.npy')
+            label_name = datapath('toronto_face_train_label.npy')
 
         elif which_set == 'valid':
-            data_name = 'toronto_face_train.npy'
-            label_name = 'toronto_face_train_label.npy'
+            data_name = datapath('toronto_face_valid.npy')
+            label_name = datapath('toronto_face_valid_label.npy')
 
         elif which_set == 'test':
-            data_name = 'toronto_face_train.npy'
-            label_name = 'toronto_face_train_label.npy'
+            data_name = datapath('toronto_face_test.npy')
+            label_name = datapath('toronto_face_test_label.npy')
+
 
         elif which_set == 'salakhutdinov_train':
             raise ValueError("Unknown dataset %s" % which_set)
@@ -59,6 +60,8 @@ class FACE(DataSet):
         self.n_datapoints = self.X.shape[0]
 
     def prepare(self, x, y, n_datapoints):
+        print(x.shape)
+        print(y.shape)
         N = x.shape[0]
         assert N == y.shape[0]
 
