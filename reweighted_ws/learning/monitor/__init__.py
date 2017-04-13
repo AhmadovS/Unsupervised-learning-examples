@@ -119,9 +119,9 @@ class MonitorLL(Monitor):
         batch_Hq = [T.sum(hq) for hq in Hq]
 
 
-        print(batch_KL.eval())
-        print(batch_Hp.eval())
-        print(batch_Hq.eval())
+        for i in batch_KL:
+            print(i.eval())
+
         print('====================')
         self.do_loglikelihood = theano.function(  
                             inputs=[batch_idx, batch_size, n_samples], 
