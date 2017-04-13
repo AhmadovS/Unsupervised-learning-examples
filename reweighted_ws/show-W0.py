@@ -11,8 +11,9 @@ import cPickle as pickle
 import numpy as np
 import h5py
 
-
-import pylab
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
 #import theano
 #import theano.tensor as T
 
@@ -88,13 +89,12 @@ if __name__ == "__main__":
     logger.debug("Using shape: %s -- %s" % (args.shape, shape))
     assert len(shape) == 2
 
-    pylab.figure()
+    plt.figure()
     for h in xrange(H):
-        pylab.subplot(width, height, h+1)
-        pylab.imshow( W0[h,perm_inv].reshape(shape), interpolation='nearest')
-        pylab.gray()
-        pylab.axis('off')
+        plt.subplot(width, height, h+1)
+        plt.imshow( W0[h,perm_inv].reshape(shape), interpolation='nearest')
+        plt.gray()
+        plt.axis('off')
 
-    pylab.legend(loc="lower right")
-    pylab.show(block=True)
+    plt.savefig('w0.png')
 
