@@ -118,8 +118,8 @@ def binarized_face(n_validation=400):
     train_data = np.load(os.path.join(config.DATASETS_DIR, 'FACE', 'toronto_face_train.npy'))
     test_data = np.load(os.path.join(config.DATASETS_DIR, 'FACE', 'toronto_face_test.npy'))
 
-    return BinarizedDatasetTheano(DatasetTheano(train_data, test_data, n_validation, shuffle=False))
-    # return DatasetTheano(train_data, test_data, n_validation, shuffle=False)
+    # return BinarizedDatasetTheano(DatasetTheano(train_data, test_data, n_validation, shuffle=False))
+    return DatasetTheano(train_data, test_data, n_validation, shuffle=False)
 
 
 def load_dataset_from_name(dataset_name):
