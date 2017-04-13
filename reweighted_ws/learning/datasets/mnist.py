@@ -61,11 +61,6 @@ class MNIST(DataSet):
         self.n_datapoints = self.X.shape[0]
 
     def prepare(self, x, y, n_datapoints):
-        print(x.shape)
-        print(y.shape)
-        print(x[0])
-        print(y[0])
-        sys.exit(0)
         N = x.shape[0]
         assert N == y.shape[0]
 
