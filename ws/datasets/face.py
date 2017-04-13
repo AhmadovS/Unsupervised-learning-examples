@@ -29,9 +29,6 @@ class FACE():
 
     def get_random_minibatch(self, subdataset, minibatch_size, rng):
         indices = rng.randint(self.data[subdataset].shape[0], size=(minibatch_size,))
-        print(self.data[subdataset][0].shape[0])
-        print(minibatch_size)
-        print(indices)
         print('======================')
         return self.minibatch(subdataset, indices, rng)
 
@@ -44,7 +41,7 @@ class FACE():
             yield self.get_random_minibatch(subdataset, minibatch_size, rng)
 
     def all_minibatches(self, subdataset, minibatch_size, rng, max_num_minibatches=None):
-        num_minibatches = 1 + (self.data[subdataset][0].shape[0] - 1) // minibatch_size
+        num_minibatches = 1 + (self.data[subdataset].shape[0] - 1) // minibatch_size
         if max_num_minibatches is not None and max_num_minibatches < num_minibatches:
             num_minibatches = max_num_minibatches
 
