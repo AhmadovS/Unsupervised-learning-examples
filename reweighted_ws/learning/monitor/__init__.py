@@ -112,9 +112,10 @@ class MonitorLL(Monitor):
         X_batch, Y_batch = dataset.late_preproc(self.X[first:last], self.Y[first:last])
         
         log_PX, _, _, _, KL, Hp, Hq = model.log_likelihood(X_batch, n_samples=n_samples)
-        print(log_PX)
+
+        print(str(log_PX))
         print('====================')
-        
+
         batch_L  = T.sum(log_PX)
         batch_L2 = T.sum(log_PX**2)
         batch_KL = [T.sum(kl) for kl in KL]
