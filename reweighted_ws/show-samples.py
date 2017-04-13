@@ -11,7 +11,7 @@ import cPickle as pickle
 import numpy as np
 import h5py
 
-
+import matplotlib
 import matplotlib.pyplot as plt
 #import theano
 #import theano.tensor as T
@@ -21,7 +21,7 @@ _logger = logging.getLogger()
 #=============================================================================
 if __name__ == "__main__":
     import argparse 
-
+    matplotlib.use('Agg')
     logger = logging.getLogger(__name__)
 
     parser = argparse.ArgumentParser()
