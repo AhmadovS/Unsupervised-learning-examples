@@ -195,7 +195,6 @@ def visualize(sess, model, dataset, directory, epoch):
     x_np_valid, _ = dataset.get_random_minibatch('valid', 100, np.random.RandomState(123))
     q_means = [q(s).out.mu for q, s in zip(model.q, model.q_samples)]
     q_means = sess.run(q_means, feed_dict={model.x: x_np})
-    print(q_means)
     for i, q_m in enumerate(q_means):
         # plt.ylim(-0.2, 1)
         print('------------------')
