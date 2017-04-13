@@ -39,7 +39,7 @@ def binarize(x, rng):
 
 def download(url, filename):
     print "Downloading"
-    pbar = progressbar.ProgressBar()
+    # pbar = progressbar.ProgressBar()
 
     def dlProgress(count, blockSize, totalSize):
         if pbar.max_value is None:
@@ -48,8 +48,8 @@ def download(url, filename):
 
         pbar.update(min(count*blockSize, totalSize))
 
-    urllib.urlretrieve(url, filename, reporthook=dlProgress)
-    pbar.finish()
+    urllib.urlretrieve(url, filename)
+    # pbar.finish()
 
 
 def convert_to_grayscale(array):
