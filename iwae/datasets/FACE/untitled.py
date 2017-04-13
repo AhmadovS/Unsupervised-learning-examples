@@ -48,15 +48,33 @@ for i in range(int(inputs_train.size / 2304)):
 	img = img.reshape((784, ))
 	train[i] = img
 
-# test = np.zeros((int(inputs_test.size / 2304), 784))
-# for i in range(int(inputs_test.size / 2304)):
-#     img = inputs_test[i]
-#     img = img.reshape((48, 48)) 
-#     img = scipy.misc.imresize(img, (28, 28))
-#     img = img.reshape((784, ))
-#     test[i] = img
+def onehot(x):
+    result = np.zeros(x.shape[0], )
+    for i in range(x.shape[0]):
+        v = x[i]
+        for j in range(v.shape[0]):
+            if v[j] == 1:
+                result[i] = j
+    return result
 
-# np.save('toronto_face_train', train)
+# new_target_train = onehot(target_train)
+# new_target_test = onehot(target_test)
+# new_target_valid = onehot(target_valid)
+
+# np.save('toronto_face_train_label', new_target_train)
+# np.save('toronto_face_valid_label', new_target_valid)
+# np.save('toronto_face_test_label', new_target_test)
+# np.save('toronto_face_valid', inputs_valid)
+
+valid = np.zeros((int(inputs_valid.size / 2304), 784))
+for i in range(int(inputs_valid.size / 2304)):
+    img = inputs_valid[i]
+    img = img.reshape((48, 48)) 
+    img = scipy.misc.imresize(img, (28, 28))
+    img = img.reshape((784, ))
+    valid[i] = img
+
+np.save('toronto_face_valid', valid)
 # np.save('toronto_face_test', test)
 
 # img = inputs_train[42]

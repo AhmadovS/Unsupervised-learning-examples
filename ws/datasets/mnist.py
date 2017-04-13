@@ -34,6 +34,10 @@ class MNIST():
         data, labels = data[indices], labels[indices]
         if self.binary:
             data = misc.binarize(data, rng)
+        print('Data: ')
+        print(data)
+        print('Label: ')
+        print(label)
         return data, labels
 
     def get_random_minibatch(self, subdataset, minibatch_size, rng):
