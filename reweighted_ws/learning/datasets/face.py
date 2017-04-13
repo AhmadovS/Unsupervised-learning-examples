@@ -62,6 +62,7 @@ class FACE(DataSet):
     def prepare(self, x, y, n_datapoints):
         print(x.shape)
         print(y.shape)
+        sys.exit(0)
         N = x.shape[0]
         assert N == y.shape[0]
 

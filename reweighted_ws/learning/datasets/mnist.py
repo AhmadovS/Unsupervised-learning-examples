@@ -43,11 +43,6 @@ class MNIST(DataSet):
 
         if which_set == 'train':
             self.X, self.Y = self.prepare(train_x, train_y, n_datapoints)
-            print(train_x.shape)
-            print(train_y.shape)
-            print(self.X.shape)
-            print(self.Y.shape)
-            sys.exit(0)
         elif which_set == 'valid':
             self.X, self.Y = self.prepare(valid_x, valid_y, n_datapoints)
         elif which_set == 'test':
@@ -68,6 +63,7 @@ class MNIST(DataSet):
     def prepare(self, x, y, n_datapoints):
         print(x.shape)
         print(y.shape)
+        sys.exit(0)
         N = x.shape[0]
         assert N == y.shape[0]
 
