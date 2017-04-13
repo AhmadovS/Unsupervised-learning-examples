@@ -198,6 +198,7 @@ def visualize(sess, model, dataset, directory, epoch):
     print('q_means')
     for i, q_m in enumerate(q_means):
         print(q_m[:, np.argsort(q_m.std(axis=0))])
+        sys.exit(0)
         plt.boxplot(q_m[:, np.argsort(q_m.std(axis=0))])
         # plt.violinplot(q_means)
         plt.savefig(os.path.join(directory, 'means of q{}.png'.format(i)))
