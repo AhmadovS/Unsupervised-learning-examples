@@ -1,0 +1,59 @@
+[19:25:23] trainer         compiling do_step
+[19:25:27] trainer         compiling do_sleep_step
+[19:25:29] trainer         Dataset contains 50000 datapoints in 500 mini-batches (100 datapoints per mini-batch)
+[19:25:29] trainer         Using 10 training samples
+[19:25:29] trainer         lr_p=1.0e-03, lr_q=1.0e-03, lr_s=1.0e-03, lr_decay=1.0e+00 layer_discount=1.00
+[19:25:29] model           Saving model parameters
+[19:25:29] SampleFromP     compiling do_sample
+[19:25:29] SampleFromP     SampleFromP(n_samples=100)
+[19:25:29] valiset         compiling do_loglikelihood
+[19:25:33] valiset         (10000 datpoints, 1 samples): LL=-348.41 +-0.67; Hp=[-348.4  -116.49 -116.47   -5.8 ]
+[19:25:41] valiset         (10000 datpoints, 5 samples): LL=-348.40 +-0.67; Hp=[-348.4  -110.72 -110.68   -5.2 ]
+[19:26:25] valiset         (10000 datpoints, 25 samples): LL=-348.40 +-0.67; Hp=[-348.4  -107.3  -107.22   -5.04]
+[19:29:17] valiset         (10000 datpoints, 100 samples): LL=-348.40 +-0.67; Hp=[-348.4  -105.34 -105.37   -5.01]
+[19:29:17] trainer         Starting epoch 0...
+[19:31:32] trainer         Completed epoch 1 in 134.9s (269.8ms/step). Calling epoch_monitors...
+[19:31:32] model           Saving model parameters
+[19:31:32] SampleFromP     SampleFromP(n_samples=100)
+[19:31:34] valiset         (10000 datpoints, 1 samples): LL=-148.80 +-0.73; Hp=[-130.31 -117.72 -117.82   -5.85]
+[19:31:43] valiset         (10000 datpoints, 5 samples): LL=-140.78 +-0.69; Hp=[-119.43 -115.77 -115.09   -5.72]
+[19:32:30] valiset         (10000 datpoints, 25 samples): LL=-137.43 +-0.68; Hp=[-114.22 -114.22 -112.89   -5.57]
+[19:35:35] valiset         (10000 datpoints, 100 samples): LL=-135.88 +-0.68; Hp=[-111.36 -113.18 -111.27   -5.47]
+[19:35:35] termination     Validation LL=-135.88 (increased by  nan %)
+[19:35:35] trainer         Starting epoch 1...
+[19:37:51] trainer         Completed epoch 2 in 136.1s (272.2ms/step). Calling epoch_monitors...
+[19:37:51] model           Saving model parameters
+[19:37:51] SampleFromP     SampleFromP(n_samples=100)
+[19:37:53] valiset         (10000 datpoints, 1 samples): LL=-137.63 +-0.67; Hp=[-115.81 -102.79 -119.88   -5.96]
+[19:38:03] valiset         (10000 datpoints, 5 samples): LL=-129.30 +-0.63; Hp=[-104.85  -99.8  -117.55   -5.86]
+[19:38:50] valiset         (10000 datpoints, 25 samples): LL=-125.45 +-0.62; Hp=[ -99.23  -97.5  -115.71   -5.78]
+[19:41:55] valiset         (10000 datpoints, 100 samples): LL=-123.65 +-0.61; Hp=[ -96.31  -96.26 -114.34   -5.71]
+[19:41:55] termination     Validation LL=-123.65 (increased by 9.00 %)
+[19:41:55] trainer         Starting epoch 2...
+[19:44:11] trainer         Completed epoch 3 in 136.2s (272.4ms/step). Calling epoch_monitors...
+[19:44:11] model           Saving model parameters
+[19:44:12] SampleFromP     SampleFromP(n_samples=100)
+[19:44:13] valiset         (10000 datpoints, 1 samples): LL=-132.28 +-0.65; Hp=[-108.91  -92.88 -115.66   -6.38]
+[19:44:23] valiset         (10000 datpoints, 5 samples): LL=-124.17 +-0.61; Hp=[ -98.06  -89.44 -112.93   -6.25]
+[19:45:10] valiset         (10000 datpoints, 25 samples): LL=-120.43 +-0.60; Hp=[ -92.59  -86.83 -110.83   -6.18]
+[19:48:17] valiset         (10000 datpoints, 100 samples): LL=-118.49 +-0.59; Hp=[ -89.54  -85.47 -109.4    -6.13]
+[19:48:17] termination     Validation LL=-118.49 (increased by 4.17 %)
+[19:48:17] trainer         Starting epoch 3...
+[19:50:34] trainer         Completed epoch 4 in 137.0s (274.1ms/step). Calling epoch_monitors...
+[19:50:34] model           Saving model parameters
+[19:50:35] SampleFromP     SampleFromP(n_samples=100)
+[19:50:37] valiset         (10000 datpoints, 1 samples): LL=-128.77 +-0.63; Hp=[-104.26  -86.73 -110.3    -6.64]
+[19:50:46] valiset         (10000 datpoints, 5 samples): LL=-120.88 +-0.60; Hp=[ -93.74  -83.09 -107.38   -6.58]
+[19:51:34] valiset         (10000 datpoints, 25 samples): LL=-117.14 +-0.58; Hp=[ -88.34  -80.58 -105.17   -6.53]
+[19:54:41] valiset         (10000 datpoints, 100 samples): LL=-115.22 +-0.58; Hp=[ -85.33  -79.03 -103.75   -6.49]
+[19:54:41] termination     Validation LL=-115.22 (increased by 2.76 %)
+[19:54:41] trainer         Starting epoch 4...
+[19:56:59] trainer         Completed epoch 5 in 138.3s (276.6ms/step). Calling epoch_monitors...
+[19:56:59] model           Saving model parameters
+[19:57:00] SampleFromP     SampleFromP(n_samples=100)
+[19:57:02] valiset         (10000 datpoints, 1 samples): LL=-126.18 +-0.63; Hp=[-101.29  -81.18 -105.66   -6.74]
+[19:57:12] valiset         (10000 datpoints, 5 samples): LL=-118.46 +-0.59; Hp=[ -90.82  -77.5  -102.25   -6.72]
+[19:57:59] valiset         (10000 datpoints, 25 samples): LL=-114.71 +-0.58; Hp=[-85.46 -75.04 -99.68  -6.7 ]
+[20:01:06] valiset         (10000 datpoints, 100 samples): LL=-112.86 +-0.57; Hp=[-82.52 -73.44 -98.    -6.68]
+[20:01:06] termination     Validation LL=-112.86 (increased by 2.05 %)
+[20:01:06] trainer         Starting epoch 5...
