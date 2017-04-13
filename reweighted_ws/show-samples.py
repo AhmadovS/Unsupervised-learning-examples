@@ -95,4 +95,4 @@ if __name__ == "__main__":
 
     pylab.legend(loc="lower right")
     pylab.show(block=True)
-
+    pylab.savefig('sample.png')
