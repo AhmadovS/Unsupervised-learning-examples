@@ -29,7 +29,6 @@ class FACE(DataSet):
         super(FACE, self).__init__(preproc)
 
         _logger.info("Loading FACE data")
-        fname = datapath(fname)
 
 
         if which_set == 'train':
