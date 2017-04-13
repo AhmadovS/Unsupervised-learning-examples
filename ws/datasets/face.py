@@ -17,15 +17,21 @@ class FACE():
         self.data = {}
         self.data['train'] = np.load(os.path.join(self.directory, 'toronto_face_train.npy'))
         self.data['test'] = np.load(os.path.join(self.directory, 'toronto_face_test.npy'))
-        self.data['valid'] = np.load(os.path.join(self.directory, 'toronto_face_test.npy'))
+        self.data['valid'] = np.load(os.path.join(self.directory, 'toronto_face_valid.npy'))
+        self.label['train'] = np.load(os.path.join(self.directory, 'toronto_face_train_label.npy'))
+        self.label['test'] = np.load(os.path.join(self.directory, 'toronto_face_test_label.npy'))
+        self.label['valid'] = np.load(os.path.join(self.directory, 'toronto_face_valid_label.npy'))
 
 
     def minibatch(self, subdataset, indices, rng):
         data = self.data[subdataset]
         data = data[indices]
+        label = self.label[subdataset]
+        label = data[indices]
         if self.binary:
             data = misc.binarize(data, rng)
-        return data, None
+
+        return data, label
 
     def get_random_minibatch(self, subdataset, minibatch_size, rng):
         indices = rng.randint(self.data[subdataset].shape[0], size=(minibatch_size,))
