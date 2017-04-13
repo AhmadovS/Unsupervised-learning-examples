@@ -195,7 +195,10 @@ def visualize(sess, model, dataset, directory, epoch):
     x_np_valid, _ = dataset.get_random_minibatch('valid', 100, np.random.RandomState(123))
     q_means = [q(s).out.mu for q, s in zip(model.q, model.q_samples)]
     q_means = sess.run(q_means, feed_dict={model.x: x_np})
+    print(q_means)
     for i, q_m in enumerate(q_means):
+        print(q_m)
+        sys.exit(0)
         plt.boxplot(q_m[:, np.argsort(q_m.std(axis=0))])
         # plt.violinplot(q_means)
         plt.savefig(os.path.join(directory, 'means of q{}.png'.format(i)))
