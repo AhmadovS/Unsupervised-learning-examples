@@ -1,7 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-plt.figsize(*figaspect(0.2))
 def display_fields(F, n_fields=24, D=28):
     for i in xrange(n_fields):
         plt.subplot(3, 8, i+1)
@@ -37,7 +36,6 @@ with tables.openFile(result_location, "r") as h5:
 # assert n_hid == model.n_hid
 
 plt.clf()
-plt.figsize(*figaspect(0.3))
 plt.title("est. Log-Likelihood");
 plt.xlabel("Epoch")
 for var, label in ( (Lp_10, 'L_{10}'), (Lp_25, 'L_{25}'), (Lp_100, 'L_{100}'),):
