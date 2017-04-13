@@ -28,7 +28,7 @@ class FACE():
         data = self.data[subdataset]
         data = data[indices]
         label = self.label[subdataset]
-        label = int(label[indices])
+        label = label[indices].astype(int)
         if self.binary:
             data = misc.binarize(data, rng)
 
