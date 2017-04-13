@@ -12,12 +12,12 @@ import numpy as np
 import h5py
 
 import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 #import theano
 #import theano.tensor as T
 
 _logger = logging.getLogger()
-matplotlib.use('Agg')
 
 #=============================================================================
 if __name__ == "__main__":
@@ -87,17 +87,14 @@ if __name__ == "__main__":
         log_p = log_p[idx]
 
 
-    plt.imshow(args.nsamples, cmap='Greys')
+
+    plt.figure()
+    for i in xrange(args.nsamples):
+        plt.subplot(10, 10, i+1)
+        plt.imshow( samples[i,perm_inv].reshape(shape), interpolation='nearest')
+        plt.gray()
+        plt.axis('off')
+
+    plt.legend(loc="lower right")
+    plt.show(block=True)
     plt.savefig('sample.png')
-    plt.close()
-
-    # # plt.figure()
-    # # for i in xrange(args.nsamples):
-    # #     plt.subplot(10, 10, i+1)
-    # #     plt.imshow( samples[i,perm_inv].reshape(shape), interpolation='nearest')
-    # #     plt.gray()
-    # #     plt.axis('off')
-
-    # plt.legend(loc="lower right")
-    # plt.show(block=True)
-
