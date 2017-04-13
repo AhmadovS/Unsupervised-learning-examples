@@ -88,7 +88,7 @@ def print_and_save(filename, *x):
 
 def tf_repeat(x, k):
     # return tf.reshape(tf.tile(x, tf.pack([1, k])), [-1, x.get_shape().as_list()[1]])
-    return tf.reshape(tf.tile(x, tf.pack([1, k])), tf.pack([-1, tf.shape(x)[1]]))
+    return tf.reshape(tf.tile(x, tf.stack([1, k])), tf.stack([-1, tf.shape(x)[1]]))
 
 def tf_log_mean_exp(x):
     m = tf.reduce_max(x, 1, keep_dims=True)

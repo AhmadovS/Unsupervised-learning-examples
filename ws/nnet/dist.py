@@ -96,7 +96,7 @@ class BernoulliLogits():
 
         def __call__(self, x):
             if x not in self.cache:
-                log_prob = -tf.reduce_sum(tf.nn.sigmoid_cross_entropy_with_logits(self.logits, x), 1)
+                log_prob = -tf.reduce_sum(tf.nn.sigmoid_cross_entropy_with_logits(logits=self.logits, labels=x), 1)
                 self.cache[x] = log_prob
             return self.cache[x]
 
