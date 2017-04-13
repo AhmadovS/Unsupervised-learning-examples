@@ -95,6 +95,4 @@ if __name__ == "__main__":
         plt.gray()
         plt.axis('off')
 
-    plt.legend(loc="lower right")
-    plt.show(block=True)
     plt.savefig('sample.png')
