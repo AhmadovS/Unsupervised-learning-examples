@@ -17,11 +17,11 @@ import matplotlib.pyplot as plt
 #import theano.tensor as T
 
 _logger = logging.getLogger()
+matplotlib.use('Agg')
 
 #=============================================================================
 if __name__ == "__main__":
     import argparse 
-    matplotlib.use('Agg')
     logger = logging.getLogger(__name__)
 
     parser = argparse.ArgumentParser()
@@ -86,13 +86,18 @@ if __name__ == "__main__":
         samples = samples[idx]
         log_p = log_p[idx]
 
-    plt.figure()
-    for i in xrange(args.nsamples):
-        plt.subplot(10, 10, i+1)
-        plt.imshow( samples[i,perm_inv].reshape(shape), interpolation='nearest')
-        plt.gray()
-        plt.axis('off')
 
-    plt.legend(loc="lower right")
-    plt.show(block=True)
+    plt.imshow(args.samples, cmap='Greys')
     plt.savefig('sample.png')
+    plt.close()
+
+    # # plt.figure()
+    # # for i in xrange(args.nsamples):
+    # #     plt.subplot(10, 10, i+1)
+    # #     plt.imshow( samples[i,perm_inv].reshape(shape), interpolation='nearest')
+    # #     plt.gray()
+    # #     plt.axis('off')
+
+    # plt.legend(loc="lower right")
+    # plt.show(block=True)
+
