@@ -12,7 +12,7 @@ experiments = {}
 
 experiments['usual'] = Struct(optimizer=tf.train.AdamOptimizer,
                               sleep_type='usual',
-                              mb_size=200,
+                              mb_size=40,
                               latent_units=[50, 20],
                               q_units=[[500] * 2, [50] * 2],
                               p_units=[[50] * 2, [500] * 2],
