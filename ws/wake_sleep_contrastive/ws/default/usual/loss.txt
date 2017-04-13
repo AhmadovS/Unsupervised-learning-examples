@@ -1,0 +1,2 @@
+epoch  0.255102040816 train rec100 24118.5 valid rec100 22861.2 train loss1 24232.1 train loss10 29118.8 train loss100 32431.1 valid loss100 30840.3 alpha 0.00510204
+epoch  99.7448979592 train rec100 nan valid rec100 nan train loss1 nan train loss10 nan train loss100 nan valid loss100 nan alpha 1.0
