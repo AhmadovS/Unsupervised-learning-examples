@@ -19,8 +19,11 @@ class MNIST():
         self.data = {}
         print(self.filename)
         with gzip.open(self.filename, 'rb') as f:
-            self.data['train'], self.data['valid'], self.data['test'] \
-                = cPickle.load(f)
+            t = cPickle.load(f)
+            print(t)
+            self.data['train'] = t[0]
+            self.data['valid'] = t[1]
+            self.data['test'] = t[1]
 
     def _ensure_file_is_on_disk(self):
         if not os.path.exists(self.directory):
