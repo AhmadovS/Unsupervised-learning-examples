@@ -18,7 +18,7 @@ experiments['usual'] = Struct(optimizer=tf.train.AdamOptimizer,
                               p_units=[[50] * 2, [500] * 2],
                               bn=True,
                               lr=0.001,
-                              n_epochs=100,
+                              n_epochs=20,
                               directory='default/usual'
                               )
 experiments['mix'] = experiments['usual'].updated(dict(sleep_type='mix', directory='default/mix'))

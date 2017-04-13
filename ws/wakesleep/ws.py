@@ -157,6 +157,7 @@ def main(args):
                   sleep=args.sleep_type,
                   batch_norm=args.bn)
     examples_per_epoch = dataset.data['train'][0].shape[0]
+    # examples_per_epoch = dataset.data['train'].shape[0]
     num_updates = args.n_epochs * examples_per_epoch / args.mb_size
 
     step = tf.Variable(0, trainable=False)
