@@ -156,6 +156,7 @@ class MonitorLL(Monitor):
                 batch_Hp, outputs = outputs[:n_layers], outputs[n_layers:]
                 batch_Hq          = outputs[:n_layers]
                 
+                print('batch_L: ' + str(batch_L))
                 L  += batch_L
                 L2 += batch_L2
                 KL += np.array(batch_KL)
