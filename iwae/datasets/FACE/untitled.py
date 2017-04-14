@@ -66,16 +66,26 @@ def onehot(x):
 # np.save('toronto_face_test_label', new_target_test)
 # np.save('toronto_face_valid', inputs_valid)
 
-valid = np.zeros((int(inputs_valid.size / 2304), 784))
-for i in range(int(inputs_valid.size / 2304)):
-    img = inputs_valid[i]
+train = np.zeros((int(inputs_train.size / 2304), 784))
+for i in range(int(inputs_train.size / 2304)):
+    img = inputs_train[i]
     img = img.reshape((48, 48)) 
     img = scipy.misc.imresize(img, (28, 28))
     img = img.reshape((784, ))
-    valid[i] = img
+    train[i] = img
 
-valid = valid / 255
-np.save('toronto_face_valid', valid)
+train = train / 255
+train = np.around(train)
+img = train[0]
+img = img.reshape((28, 28))
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+plt.imshow(img, cmap='Greys')
+plt.savefig("damn.png")
+plt.close()
+
+# np.save('toronto_face_train', train)
 # np.save('toronto_face_test', test)
 
 # img = train[42]
