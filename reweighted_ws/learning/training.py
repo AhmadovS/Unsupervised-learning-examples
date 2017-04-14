@@ -275,9 +275,15 @@ class Trainer(TrainerBase):
         n_batches = n_datapoints // batch_size
         epoch = self.step // n_batches
         LL_epoch = 0
+        print(n_datapoints)
+        print(batch_size)
+        print(n_batches)
+        print(epoch)
 
         self.update_shvars()
         self.shuffle_train_data()
+
+        print(self.shvar)
 
         # Update learning rated
         self.shvar['lr_p'].set_value((self.calc_learning_rates(self.learning_rate_p / self.lr_decay**epoch)).astype(floatX))
@@ -285,6 +291,7 @@ class Trainer(TrainerBase):
         self.shvar['lr_s'].set_value((self.calc_learning_rates(self.learning_rate_s / self.lr_decay**epoch)).astype(floatX))
 
         widgets = ["Epoch %d, step "%(epoch+1), pbar.Counter(), ' (', pbar.Percentage(), ') ', pbar.Bar(), ' ', pbar.Timer(), ' ', pbar.ETA()]
+
         bar = pbar.ProgressBar(widgets=widgets, maxval=n_batches).start()
 
         t0 = time()
